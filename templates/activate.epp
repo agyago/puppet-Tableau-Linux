@@ -1,0 +1,3 @@
+/opt/tableau/tableau_server/packages/customer-bin.<%= $version -%>/tsm licenses activate -t
+
+

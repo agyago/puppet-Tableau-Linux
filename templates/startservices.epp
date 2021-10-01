@@ -1,0 +1,1 @@
+/opt/tableau/tableau_server/packages/scripts.<%= $version -%>/start-administrative-services

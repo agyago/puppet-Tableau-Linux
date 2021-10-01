@@ -1,0 +1,12 @@
+# managed from puppet
+
+http_proxy=httpyourproxy
+<% case @hostname # your main servres and worker nodes
+when /stg/ %> 
+no_proxy="localhost,127.0.0.1," 
+<% when /prd/ %>
+no_proxy="localhost,127.0.0.1,"
+<% when /stndby/ %>
+no_proxy="localhost,127.0.0.1,"
+<% end %>
+

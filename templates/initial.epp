@@ -1,0 +1,6 @@
+<% if $facts['hostname'] =~ /srv/ { -%>
+/opt/tableau/tableau_server/packages/scripts.<%= $version -%>/initialize-tsm --accepteula -f
+<% } -%>
+<% if $facts['hostname'] =~ /wrkr/ { -%>
+/opt/tableau/tableau_server/packages/scripts.<%= $version -%>/initialize-tsm -b /tmp/bootstrap-tbl.json --accepteula -f,
+<% } -%>

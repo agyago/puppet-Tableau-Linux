@@ -1,0 +1,3 @@
+username=<%= $users %>
+password=<%= $paswd %>
+domain= "input domain"

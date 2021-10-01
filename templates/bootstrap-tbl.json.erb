@@ -1,0 +1,8 @@
+<% case @hostname
+when /stg/ %>
+  <%= @boot_file_stg %>
+<% when /prd/ %>
+  <%= @boot_file_prd %>
+<% when /stndby/ %>
+  <%= @boot_file_stndby %>
+<% end %>

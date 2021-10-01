@@ -1,0 +1,1 @@
+/opt/tableau/tableau_server/packages/customer-bin.<%= $version -%>/tabcmd initialuser --server 'localhost:80' --username '<%= $initadmin -%>' --password '<%= $initpaswd -%>'

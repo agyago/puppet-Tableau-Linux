@@ -1,0 +1,1 @@
+/opt/tableau/tableau_server/packages/customer-bin.<%= $version -%>/tsm register --file <%= $register -%>

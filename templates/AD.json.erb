@@ -1,0 +1,33 @@
+{
+  "configEntities":{
+    "identityStore": {
+		"_type": "identityStoreType",
+		"type": "activedirectory",
+		"domain": "yourdomain",
+		"nickname": "",
+		"directoryServiceType": "activedirectory",
+		"bind": "simple",
+    "hostname": "<%= @ad_host %>",
+		"username": "<%= @ad_user %>",
+		"password": "<%= @ad_pswd %>",
+		"port": "389",
+	        "identityStoreSchemaType":{
+                  "userBaseDn": "OU=,OU=,DC=,dc=,dc=,dc=", # input here
+                  "userBaseFilter":"(objectClass=person)",
+                  "userUsername":"cn",
+                  "userDisplayName":"displayName",
+                  "userEmail":"mail",
+                  "groupBaseDn": "OU=,OU=,DC=,dc=,dc=,dc=", # input here
+                  "groupBaseFilter":"(objectClass=group)",
+                  "groupName":"cn",
+                  "groupDescription":"name",
+                  "member":"member",
+                  "serverSideSorting": "false",
+                  "rangeRetrieval": "false",
+                  "membersRetrievalPageSize": "1500",
+                  "userClassNames": ["person"],
+                  "groupClassNames": ["group"]
+            }
+    	}
+    }
+}
