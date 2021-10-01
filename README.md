@@ -1,9 +1,5 @@
 # Tableau-Linux
 
-Welcome to your new module. A short overview of the generated parts can be found in the PDK documentation at https://puppet.com/docs/pdk/latest/pdk_generating_modules.html .
-
-The README template below provides a starting point with details about what information to include in your README.
-
 #### Table of Contents
 
 1. [Description](#description)
@@ -15,6 +11,7 @@ The README template below provides a starting point with details about what info
 ## Description
 
   Although Tableau gave a simple one-liner auto install, it is better to puppetize it for easier deployment. 
+  This module will install server and worker nodes.
 
 
 ## Setup
@@ -48,9 +45,12 @@ The README template below provides a starting point with details about what info
 
 
 ## Usage
+```
   Server.pp and worker.pp
     version => '20211.21.0819.1914' # place the version here
     admin   => ['user1','user2']    # users who need access to tsmadmin
+    
+ 
 
 
 
