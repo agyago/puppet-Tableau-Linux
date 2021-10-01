@@ -35,6 +35,19 @@
     templates/AD.json.erb => input the required details in your AD/LDAP
     templates/creds.epp => input your domain
     templates/20-proxy.conf.erb => fill this with your main server and workers and your proxy server
+    
+    1. Install node1 first using the server.pp
+    2. Once installed, go to the tsm web and download the bootstrap
+    3. login to the puppetserver or compiler and encrypt it
+    example:
+    # String (encrypting usernames)
+      /usr/local/bin/eyaml encrypt --pkcs7-public-key=/etc/puppetlabs/puppet/eyaml/public_key.pkcs7.pem -o string -s "string"
+    # Password (will get prompted to enter a string --encrypting passwords)
+      /usr/local/bin/eyaml encrypt --pkcs7-public-key=/etc/puppetlabs/puppet/eyaml/public_key.pkcs7.pem -o string -p
+    # Files (encrypting keys)
+      /usr/local/bin/eyaml encrypt --pkcs7-public-key=/etc/puppetlabs/puppet/eyaml/public_key.pkcs7.pem -o string -f $file
+    4. copy the file and paste it into Data/secrets.yaml -> tableau::boot_file_
+  
                
 
 
@@ -49,8 +62,7 @@
   Server.pp and worker.pp
     version => '20211.21.0819.1914' # place the version here
     admin   => ['user1','user2']    # users who need access to tsmadmin
-    
- 
+```
 
 
 
