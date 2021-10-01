@@ -47,6 +47,8 @@
     # Files (encrypting keys)
       /usr/local/bin/eyaml encrypt --pkcs7-public-key=/etc/puppetlabs/puppet/eyaml/public_key.pkcs7.pem -o string -f $file
     4. copy the file and paste it into Data/secrets.yaml -> tableau::boot_file_
+    5. install worker node via worker.pp
+    6. puppet run on each node. hint: (use jobs)
   
                
 
