@@ -61,9 +61,11 @@
 
 ## Usage
 ```
-  Server.pp and worker.pp
-    version => '20211.21.0819.1914' # place the version here
-    admin   => ['user1','user2']    # users who need access to tsmadmin
+server.pp || worker.pp
+tableau::config { 'server': # or worker
+    version => '20211.21.0819.1914', # place the version here
+    admin   => ['user1','user2']     # users who need access to tsmadmin
+  }
 ```
 
 
